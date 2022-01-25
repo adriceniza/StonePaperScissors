@@ -1,4 +1,3 @@
-package client;
 
 import java.io.BufferedOutputStream;
 import java.io.BufferedReader;
@@ -53,11 +52,10 @@ public class Client {
                 bw.write(linea);
                 bw.newLine();
                 bw.flush();
+                System.out.println(br.readLine());
                 linea = br.readLine();
                 String eleccionServidor = linea.split(":")[1];
                 System.out.println("El servidor dice: " + linea);
-                System.out.println(eleccionCliente);
-                System.out.println(eleccionServidor);
 
 
                 if(eleccionCliente.equals("piedra") && eleccionServidor.equals("Piedra"))
@@ -99,9 +97,7 @@ public class Client {
                 {
                     System.out.println("Ha ocurrido un error" + eleccionCliente + eleccionServidor);
                     
-                }
-                
-                System.exit(0);
+                }     
                
             }
             

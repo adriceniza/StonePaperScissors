@@ -53,8 +53,9 @@ public class StonePaperScissorsThread extends Thread{
                 if(Arrays.asList(posibilidades).contains(linea))
                 {
                     System.out.println(laIP +": " + linea);
-                    int randomNum = (int)(Math.random()*3+1);
-                    bw.write("Eligo :" + posibilidades[randomNum]);
+                    int randomNum = (int)(Math.random()*2+1);
+                    String eleccion = posibilidades[randomNum];
+                    bw.write("Servidor : " + eleccion);
                     bw.newLine();
                     bw.flush();
                 }else{
